@@ -10,6 +10,6 @@ spec:
     name: in-cluster
     namespace: default
   source:
-    path: "../../../Helm/Chart"
+    path: "Helm"
     repoURL: "git@github.com:bystrov1c/simplegitops.git"
     targetRevision: HEAD
