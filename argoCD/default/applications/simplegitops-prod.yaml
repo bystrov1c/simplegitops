@@ -6,6 +6,7 @@ metadata:
   finalizer:
     - resources-finalizer-argocd.argoproj.io
 spec:
+  project: simplegitops
   destination:
     name: in-cluster
     namespace: default
