@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: simplegitops-prod
+  name: myapp2
   namespace: argocd
   finalizer:
     - resources-finalizer-argocd.argoproj.io
