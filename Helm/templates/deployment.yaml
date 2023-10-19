@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    project: simpleweb
+    env: {{ .Values.env }}
+spec:
+  replicas: {{ .Values.deployment.replicCount }}
+  selector:
+    matchLabels:
+      project: simpleweb
+      env: {{ .Values.env }}
+  template:
+    metadata:
+      labels: 
+        project: simpleweb
+        env: {{ .Values.env }}
+    spec:
+      containers:
+        - name: simplewebpy
+          image: abistrov/simplewebpy:{{ .Values.deployment.imageTag }}
+          ports:
+            - containerPort: 5000

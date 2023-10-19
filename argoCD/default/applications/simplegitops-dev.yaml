@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1
+kind: Application
+metadata:
+  name: simplegitops-dev
+  namespace: argocd
+  finalizer:
+    - resources-finalizer-argocd.argoproj.io
+spec:
+  destination:
+    name: in-cluster
+    namespace: default
+  source:
+    path: "../../../Helm"
+    repoURL: "git@github.com:bystrov1c/simplegitops.git"
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+      - helm-dev-values.yaml

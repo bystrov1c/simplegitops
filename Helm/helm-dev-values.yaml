@@ -1,0 +1,8 @@
+env: dev
+
+deployment:
+  imageTag: latest
+  replicCount: 2
+
+ingress:
+  host: dev.addr-in-hosts.com

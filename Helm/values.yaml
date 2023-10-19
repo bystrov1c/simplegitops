@@ -1,0 +1,8 @@
+env: prod
+
+deployment:
+  imageTag: 1.0.0
+  replicCount: 3
+
+ingress:
+  host: prod.addr-in-hosts.com
