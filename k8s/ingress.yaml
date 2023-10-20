@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: simpleweb
-  namespace: nginx-ingress
 spec:
   rules:
   - host: dev.addr-in-hosts.com
@@ -22,6 +21,6 @@ spec:
           path: /
           backend:
             service:
-              name: simpleweb
+              name: simpleweb-prod
               port:
                 number: 80
